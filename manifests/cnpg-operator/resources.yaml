@@ -17048,7 +17048,7 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg
+  name: cnpg
   namespace: cnpg-system
 ---
 apiVersion: rbac.authorization.k8s.io/v1
@@ -17060,7 +17060,7 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg
+  name: cnpg
 rules:
 - apiGroups:
   - ""
@@ -17298,7 +17298,7 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg-edit
+  name: cnpg-edit
 rules:
 - apiGroups:
   - postgresql.cnpg.io
@@ -17329,7 +17329,7 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg-view
+  name: cnpg-view
 rules:
 - apiGroups:
   - postgresql.cnpg.io
@@ -17358,14 +17358,14 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg
+  name: cnpg
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: cnpg-cloudnative-pg
+  name: cnpg
 subjects:
 - kind: ServiceAccount
-  name: cnpg-cloudnative-pg
+  name: cnpg
   namespace: cnpg-system
 ---
 apiVersion: v1
@@ -17905,7 +17905,7 @@ metadata:
     app.kubernetes.io/name: cloudnative-pg
     app.kubernetes.io/version: 1.27.0
     helm.sh/chart: cloudnative-pg-0.26.0
-  name: cnpg-cloudnative-pg
+  name: cnpg
   namespace: cnpg-system
 spec:
   replicas: 1
@@ -17918,7 +17918,7 @@ spec:
       annotations:
         checksum/config: f1f28c389a8649fc9f46fd6324be7f5cdb07985099e7c02e15359f6574b7dd07
         checksum/monitoring-config: b1b5bf6a84a08c8619e1dc9381f3db714a5ae956e4ac2d2d9335e6b4bb0759db
-        checksum/rbac: 03f58ed6878d06734a51d0e6ce1f9651ef27c53bf2e54fcb824e4b1c1c1869fe
+        checksum/rbac: 8d2c4b8e4192fdfe9746280784472d96ef994216e99318107d27b6b6aaefbc48
       labels:
         app.kubernetes.io/instance: cnpg
         app.kubernetes.io/name: cloudnative-pg
@@ -17990,7 +17990,7 @@ spec:
         runAsNonRoot: true
         seccompProfile:
           type: RuntimeDefault
-      serviceAccountName: cnpg-cloudnative-pg
+      serviceAccountName: cnpg
       terminationGracePeriodSeconds: 10
       volumes:
       - emptyDir: {}
