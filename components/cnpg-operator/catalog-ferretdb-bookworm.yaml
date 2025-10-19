@@ -1,7 +1,7 @@
 apiVersion: postgresql.cnpg.io/v1
 kind: ClusterImageCatalog
 metadata:
-  name: ferretdb-bookwork
+  name: ferretdb-bookworm
   labels:
     images.cnpg.io/family: postgresql
     images.cnpg.io/publisher: ferretdb
