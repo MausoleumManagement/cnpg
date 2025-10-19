@@ -18005,6 +18005,22 @@ apiVersion: postgresql.cnpg.io/v1
 kind: ClusterImageCatalog
 metadata:
   labels:
+    images.cnpg.io/date: "20250812"
+    images.cnpg.io/family: postgresql
+    images.cnpg.io/os: bookworm
+    images.cnpg.io/publisher: ferretdb
+    images.cnpg.io/type: documentdb
+  name: ferretdb-bookwork
+  namespace: cnpg-system
+spec:
+  images:
+  - image: ghcr.io/ferretdb/postgres-documentdb:17-0.106.0-ferretdb-2.5.0@sha256:4a2364db8c91fd82855a4eab326202e247aa9ed6a6e8a85c76c1693a5a9ab408
+    major: 17
+---
+apiVersion: postgresql.cnpg.io/v1
+kind: ClusterImageCatalog
+metadata:
+  labels:
     images.cnpg.io/date: "20250916"
     images.cnpg.io/family: postgresql
     images.cnpg.io/os: trixie
