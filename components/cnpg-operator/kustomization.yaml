@@ -17,4 +17,4 @@ helmcharts:
 resources:
   - namespace.yaml
   - catalog-standard-trixie.yaml
-  - catalog-ferretdb-bookworm.yaml
+  - catalog-documentdb-bookworm.yaml

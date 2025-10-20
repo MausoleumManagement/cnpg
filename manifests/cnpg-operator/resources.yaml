@@ -18010,7 +18010,7 @@ metadata:
     images.cnpg.io/os: bookworm
     images.cnpg.io/publisher: ferretdb
     images.cnpg.io/type: documentdb
-  name: ferretdb-bookworm
+  name: documentdb-bookworm
   namespace: cnpg-system
 spec:
   images:
